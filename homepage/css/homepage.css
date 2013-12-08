@@ -1,0 +1,120 @@
+﻿/**
+* general rules
+**/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.container {
+  position: relative;
+}
+.container:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+  visibility: hidden;
+}
+.arrow-down {
+  border-color: #C0C0C0 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  border-style: solid;
+  border-width: 3px 3px 0;
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
+  position: relative;
+  left: 4px;
+  top: -1px;
+  width: 0;
+}
+
+/**
+* page layout
+**/
+.page-wrapper {
+  min-width: 960px;
+}
+.header {
+  background-color: #2D2D2D;
+  height: 30px;
+}
+.content-wrapper {
+  min-height: 550px;
+}
+.footer {
+  height: 40px;
+  background-color: #F2F2F2;
+  color: #666;
+  border-top: 1px solid #E4E4E4;
+}
+
+
+/**
+* module
+**/
+.page-nav {
+  float: left;
+  margin: 0 10px;
+  padding: 0 5px;
+}
+.page-nav__site-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.page-nav__site-item {
+  float: left;
+  display: block;
+  padding: 5px 5px 5px 0;
+}
+.page-nav__link {
+  color: #CCC;
+  display: block;
+  text-decoration: none;
+  padding: 0 5px;
+  font-family: Arial, Trebuchet MS, sans-serif;
+}
+
+.account {
+  float: right;
+}
+.account__opt-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.account__opt-item {
+  float: right;
+}
+.account__link {
+  display: block;
+  text-decoration: none;
+  color: #CCC;
+  padding: 0 5px;
+  font-family: Arial, Sans-serif;
+}
+.option-wheel {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(img/account.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+
