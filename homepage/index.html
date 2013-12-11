@@ -13,7 +13,8 @@
 
   <header id="header" class="header">
     <div class="container">
-      <nav class="page-nav">
+      <div class="container head-nav-container">
+      <nav id="head-nav" class="page-nav">
         <ul class="page-nav__site-list">
           <li class="page-nav__site-item">
           <a class="page-nav__link" href="#"><span class="page-nav__text">+You</span></a>
@@ -40,19 +41,26 @@
             <a class="page-nav__link" href="#"><span class="page-nav__text">Drive</span></a>
           </li>
           <li class="page-nav__site-item page-nav__more-toggle">
-            <a class="page-nav__link" href="#"><span class="page-nav__text">More</span><span class="arrow-down"></span></a>
+            <a class="page-nav__link page-nav__toggle-link" href="#"><span class="page-nav__text">More</span><span class="arrow-down"></span></a>
+            <ul class="page-nav__more-list">
+              <li class="page-nav__more-item">
+                <a class="page-nav__more-link" href="#"><span class="page-nav__more-text">Calendar</span></a>
+              </li>
+              <li class="page-nav__more-item">
+                <a class="page-nav__more-link" href="#"><span class="page-nav__more-text">Translate</span></a>
+              </li>
+              <li class="page-nav__more-item">
+                <a class="page-nav__more-link" href="#"><span class="page-nav__more-text">Blogger</span></a>
+              </li>
+              <li class="page-nav__more-item">
+                <a class="page-nav__more-link" href="#"><span class="page-nav__more-text">Finance</span></a>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>
-      <div class="account">
-        <ul class="account__opt-list">
-          <li class="account__opt-item account__opt-toggle">
-            <a class="account__link"><span class="option-wheel"></span></a>
-          </li>
-          <li class="account__opt-item">
-            <a class="account__link"><span class="account__label">Sign in</span></a>
-          </li>
-        </ul>
+      </div>
+      <div class="container account-container">
       </div>
     </div>
   </header>
@@ -64,6 +72,19 @@
   </footer>
 
 </div>
-
+<script src="../../dome/src/dome.js"></script>
+<script src="js/page-nav.js"></script>
+<script src="js/account.js"></script>
+<script src="js/homepage.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
