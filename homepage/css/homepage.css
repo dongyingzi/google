@@ -132,7 +132,35 @@
 /**
 * account module
 **/
-
+.account-countainer {
+  float: right;
+}
+.account__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.account__item {
+  float: right;
+  display: block;
+  position: relative;
+}
+.account__link {
+  display: block;
+  margin: 5px;
+  color: #CCCCCC;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+.account__text {
+  display: block;
+}
+.account__icon-wheel {
+  display: block;
+  background-image: url(../img/account.png);
+  width: 16px;
+  height: 16px;
+}
 
 
 
