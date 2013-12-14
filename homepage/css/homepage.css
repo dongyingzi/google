@@ -132,7 +132,7 @@
 /**
 * account module
 **/
-.account-countainer {
+.account-container {
   float: right;
 }
 .account__list {
@@ -144,6 +144,10 @@
   float: right;
   display: block;
   position: relative;
+  height: 30px;
+}
+.account__item--active {
+  background-color: #FFF;
 }
 .account__link {
   display: block;
@@ -161,6 +165,65 @@
   width: 16px;
   height: 16px;
 }
+.account__item--active .account__icon-wheel {
+  background-position: -6px -22px;
+}
+
+/**
+* module search-setting
+**/
+.search-setting {
+  position: absolute;
+  display: none;
+  top: 100%;
+  right: 0;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  width: 160px;
+  border: 1px solid #BEBEBE;
+  -webkit-box-shadow: 0 0 3px #BEBEBE;
+     -moz-box-shadow: 0 0 3px #BEBEBE;
+          box-shadow: 0 0 3px #BEBEBE;
+}
+.account__item--active .search-setting {
+  display: block;
+}
+.search-setting__item {
+  display: block;
+  height: 30px;
+}
+.search-setting__separator {
+  display: block;
+  height: 0;
+  border: 0;
+  margin: 10px 0;
+  padding: 0;
+  border-top: 1px solid #BEBEBE;
+}
+.search-setting__link {
+  display: block;
+  padding: 0 10px;
+  font: 15px/2 Arial, sans-serif;
+  text-decoration: none;
+}
+.search-setting__link:visited {
+  color: #5A66DD;
+}
+.search-setting__link:hover {
+  background-color: #EEE;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

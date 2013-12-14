@@ -12,6 +12,18 @@ function Account(account) {
   this.itemToggle.addEventListener("click", function (event) {
     Account.toggleItemClassFromChild(event.target, "account__item--active");
   }, false);
+  dome.select(document).addEventListener("click", function (event) {
+    var p = event.target;
+    while (p !== null && p.nodeType === 1 
+      && !dome.hasClass(p, "account__item-toggle")) {
+      p = p.parentNode;
+    } // while
+    if (p === null || p.nodeType !== 1) {
+      that.itemToggle.forEach(function (d) {
+        Account.removeItemClassFromChild(d, "account__item--active");
+      });
+    } // end if
+  }, false);
 } // end Account()
 
 /**
@@ -21,15 +33,29 @@ function Account(account) {
 * @param cls {string} 需要切换的class
 **/
 Account.toggleItemClassFromChild = function (element, cls) {
-  var p = element.parentNode;
-  while (p !== null && !dome.hasClass(p, "account__item")) {
+  var p = element;
+  while (p !== null & p.nodeType === 1 && !dome.hasClass(p, "account__item")) {
     p = p.parentNode;
   } // end while
   if (p !== null) {
     dome.toggleClass(p, cls);
   } // end if
-  
 } // end toggleItemClassFromChild()
+/**
+* 为父元素.account__item移除cls
+* @method removeItemClassFromChild
+* @param element {Element} 需要为父.account__item移除cls的对象
+* @param cls {string} 需要移除的class
+**/
+Account.removeItemClassFromChild =  function (element, cls) {
+  var p = element;
+  while (p !== null && p.nodeType === 1 && !dome.hasClass(p, "account__item")) {
+    p = p.parentNode;
+  } // end while
+  if (p !== null && p.nodeType === 1 && dome.hasClass(p, "account__item")) {
+    dome.removeClass(p, cls);
+  } // end if
+} // end removeItemClassFromChild()
 
 
 
