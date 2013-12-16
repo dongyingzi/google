@@ -1,0 +1,110 @@
+﻿/**
+* 独立功能css
+**/
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+}
+.container {
+  position: relative;
+}
+.container:after {
+  display: block;
+  content: ".";
+  height: 0;
+  font-size: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+/**
+* page layout
+**/
+.page-wrapper {
+  display: block;
+  min-width: 960px;
+  min-height: 500px;
+}
+.page-header {
+  display: block;
+  height: 60px;
+}
+.main-content {
+  min-width: 820px;
+  min-height: 400px;
+  margin: 0 auto;
+}
+.page-footer {
+  height: 40px;
+  min-width: 960px;
+  width: 100%;
+  border-top: 1px solid #E4E4E4;
+  position: fixed;
+  bottom: 0;
+}
+
+/**
+* module
+**/
+.account-container {
+  float: right;
+}
+.account__operation-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.account__operation-item {
+  display: block;
+  margin: 15px 20px 15px 0;
+  height: 30px;
+  float: right;
+}
+.account__operation-btn {
+  display: inline-block;
+  padding: 5px 12px;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.125;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background-color: #4583ED;
+  color: #FFF;
+  font-family: Arial, sans-serif;
+}
+.app__list-toggle {
+  display: inline-block;
+  background-image: url(../img/icon-sprite.png);
+  background-position: 	-431px -242px;
+  width: 30px;
+  height: 30px;
+}
+.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
