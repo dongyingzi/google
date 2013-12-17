@@ -90,6 +90,35 @@
   width: 30px;
   height: 30px;
 }
+.app__list-container {
+  display: none;
+  position: absolute;
+  top: 200%;
+  right: -100px;
+  z-index: 1000;
+  width: 320px;
+  height: 400px;
+  border: 1px solid #CCC;
+  -webkit-box-shadow: 0 0 5px #CCC;
+     -moz-box-shadow: 0 0 5px #CCC;
+          box-shadow: 0 0 5px #CCC;
+}
+.app__list-container--active {
+  display: block;
+}
+.account__operation-link {
+  display: inline-block;
+  text-decoration: none;
+  margin: 7px 0;
+  font-size: 15px;
+  color: #000;
+}
+.account__operation-link:hover {
+  border-bottom: 1px solid;
+}
+.account__operation-text {
+  font-family: Arial, sans-serif;
+}
 .
 
 
