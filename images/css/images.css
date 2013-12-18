@@ -83,6 +83,19 @@
   color: #FFF;
   font-family: Arial, sans-serif;
 }
+.account__operation-link {
+  display: inline-block;
+  text-decoration: none;
+  margin: 7px 0;
+  font-size: 15px;
+  color: #000;
+}
+.account__operation-link:hover {
+  border-bottom: 1px solid;
+}
+.account__operation-text {
+  font-family: Arial, sans-serif;
+}
 .app__list-toggle {
   display: inline-block;
   background-image: url(../img/icon-sprite.png);
@@ -97,7 +110,8 @@
   right: -100px;
   z-index: 1000;
   width: 320px;
-  height: 400px;
+  min-height: 338px;
+  height: 396px;
   border: 1px solid #CCC;
   -webkit-box-shadow: 0 0 5px #CCC;
      -moz-box-shadow: 0 0 5px #CCC;
@@ -106,20 +120,104 @@
 .app__list-container--active {
   display: block;
 }
-.account__operation-link {
+.app__list {
+  list-style: none;
+  margin: 0;
+  padding: 28px 10px 28px 10px;
+  width: 300;
+}
+.app__item {
+  float: left;
+  width: 100px;
+  height: 100px;
   display: inline-block;
+}
+.app__link {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  font-family:Arial, sans-serif;
+  font-size: 14px;
   text-decoration: none;
-  margin: 7px 0;
-  font-size: 15px;
   color: #000;
+  text-align: center;
 }
-.account__operation-link:hover {
-  border-bottom: 1px solid;
+.app__icon {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 10px auto;
+  background-image: url(../img/icon-sprite.png);
 }
-.account__operation-text {
+.app__icon-google-plus {
+  background-position: -138px -69px;
+}
+.app__icon-google-search {
+  background-position: -237px -69px;
+}
+.app__icon-youtube {
+  background-position: -324px -277px;
+}
+.app__icon-google-map {
+  background-position: -104px 0;
+}
+.app__icon-play {
+  background-position: -208px 0;
+}
+.app__icon-gmail {
+  background-position: -277px 0;
+}
+.app__icon-drive {
+  background-position: -306px -138px;
+}
+.app__icon-calendar {
+  background-position: -69px -207px;
+}
+.app__more-link {
+  display: block;
+  width: 100%;
+  height: 40px;
+  background-color: #F5F5F5;
+  color: #737373;
+  text-align: center;
   font-family: Arial, sans-serif;
+  text-decoration: none;
 }
-.
+.app__more-text {
+  display: inline;
+  font-size: 14px;
+  line-height: 2.8571;
+}
+
+.page-icon-container {
+  width: 269px;
+  height: 95px;
+  margin: 150px auto 20px;
+}
+.page-icon {
+  width: 269px;
+  height: 95px;
+  background-image: url(../img/page-icon.png);
+}
+
+.search-container {
+  width: 630px;
+  margin: 0 auto;
+}
+.search__input-container {
+  width: 580px;
+  float: left;
+}
+.search__input {
+  display: block;
+  width: 580px;
+}
+.search__submit-container {
+  width: 50px;
+  float: left;
+}
+
+
 
 
 
