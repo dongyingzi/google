@@ -47,6 +47,7 @@
   border-top: 1px solid #E4E4E4;
   position: fixed;
   bottom: 0;
+  background-color: #F2F2F2;
 }
 
 /**
@@ -113,6 +114,7 @@
   min-height: 338px;
   height: 396px;
   border: 1px solid #CCC;
+  background-color: #FFF;
   -webkit-box-shadow: 0 0 5px #CCC;
      -moz-box-shadow: 0 0 5px #CCC;
           box-shadow: 0 0 5px #CCC;
@@ -192,12 +194,21 @@
 .page-icon-container {
   width: 269px;
   height: 95px;
-  margin: 150px auto 20px;
+  margin: 120px auto 20px;
 }
 .page-icon {
   width: 269px;
   height: 95px;
   background-image: url(../img/page-icon.png);
+}
+.page-icon__text {
+  font-family: Arial, sans-serif;
+  color: #1370E9;
+  font-weight: bold;
+  position: absolute;
+  width: 60px;
+  left: 110px;
+  bottom: 10px;
 }
 
 .search-container {
@@ -205,19 +216,86 @@
   margin: 0 auto;
 }
 .search__input-container {
-  width: 580px;
+  width: 540px;
   float: left;
 }
 .search__input {
   display: block;
-  width: 580px;
+  width: 540px;
+  line-height: 1.2;
 }
 .search__submit-container {
-  width: 50px;
+  width: 70px;
   float: left;
+  margin-left: 20px;
+}
+.search__submit {
+  width: 70px;
+  height: 26px;
+  background-color: #4583ED;
+  font-family: Arial, sans-serif;
+  color: #FFF;
+  font-size: 14px;
 }
 
 
+.footer-about-container {
+  float: left;
+}
+.footer-about {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-about__item {
+  display: block;
+  float: left;
+  height: 40px;
+  margin-left: 20px;
+}
+.footer-about__link {
+  color: #806666;
+  text-decoration: none;
+  display: block;
+  height: 16px;
+  margin: 12px 0;
+}
+.footer-about__link:hover {
+  border-bottom: 1px solid;
+}
+.footer-about__text {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.footer-setting-container {
+  float: right;
+  height: 40px;
+}
+.footer-setting {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-setting__item {
+  float: left;
+  height: 40px;
+  display: block;
+  margin-right: 20px;
+}
+.footer-setting__link {
+  color: #806697;
+  text-decoration: none;
+  margin: 13px 0;
+  display: block;
+}
+.footer-setting__link:hover {
+  border-bottom: 1px solid;
+}
+.footer-setting__text {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
 
 
 
