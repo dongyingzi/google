@@ -1,0 +1,38 @@
+﻿.navigation {
+  border-bottom: 1px solid #C9D7F1;
+}
+
+.page-nav {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.page-nav__item {
+  display: block;
+  float: left;
+  padding: 5px 10px;
+}
+
+.help-nav__container {
+  float: right;
+}
+.help-nav {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.help-nav__item {
+  float: left;
+  padding: 5px 10px;
+  display: block;
+}
+.help-nav__separator {
+  float: left;
+  display: block;
+  width: 0;
+  height: 1em;
+  margin-top: 10px;
+  border-left: 1px solid #606;
+}

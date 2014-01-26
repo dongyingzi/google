@@ -1,0 +1,37 @@
+﻿.map-search {
+  background-color: #F5F5F5;
+  border-bottom: 1px solid #E5E5E5;
+  padding: 10px 20px;
+}
+
+.go-index {
+  text-indent: -9999px;
+  display: block;
+  float: left;
+  height: 40px;
+  width: 120px;
+  background-image: url(../img/page-icon.png);
+}
+
+.map-search__input {
+  display: block;
+  float: left;
+  height: 25px;
+  margin: 5px 0 0 40px;
+  max-width: 520px;
+  width: 520px;
+}
+
+.map-search__submit {
+  float: left;
+  display: block;
+  margin-top: 5px;
+  padding: 5px 20px;
+  background-color: #4889F2;
+}
+.search-icon {
+  font-family: "FontAwesome";
+}
+.search-icon:before {
+  content: content: "\f002";
+}

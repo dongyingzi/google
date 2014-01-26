@@ -1,0 +1,90 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>Google 地图</title>
+  <link rel="shortcut icon" href="img/google-map-icon.ico">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/font-size.css">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="css/generic.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/map-search.css">
+  <link rel="stylesheet" href="css/map-nav.css">
+  <link rel="stylesheet" href="css/map-view.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+<div class="page-wrapper">
+  <a href="#map-nav" class="sr-only">跳转到地图导航</a>
+  <h1 class="sr-only">Google地图</h1>
+  
+  <header>
+    <nav class="navigation clearfix">
+      <ul class="page-nav">
+        <li class="page-nav__item"><a class="page-nav__link" href="#">搜索</a></li>
+        <li class="page-nav__item"><a class="page-nav__link" href="#">图片</a></li>
+        <li class="page-nav__item"><a class="page-nav__link" href="#">地图</a></li>
+        <li class="page-nav__item"><a class="page-nav__link" href="#">新闻</a></li>
+        <li class="page-nav__item"><a class="page-nav__link" href="#">云端硬盘</a></li>
+        <li class="page-nav__item"><a class="page-nav__link" href="#">日历</a></li>
+        <li class="page-nav__item"><a class="page-nav__link" href="#">翻译</a></li>
+        <li class="page-nav__item"><a class="page-nav__link" href="#">相册</a></li>
+        <li class="page-nav__item"><a class="page-nav__more" href="#">更多<span class="arrow-down"></span></a></li>
+      </ul>
+      
+      <div class="help-nav__container">
+      <ul class="help-nav">
+        <li class="help-nav__item"><a class="help-nav__link" href="#">Google 地图实验室</a></li>
+        <li class="help-nav__separator"></li>
+        <li class="help-nav__item"><a class="help-nav__link" href="#">帮助</a></li>
+      </ul>
+      </div>
+      
+    </nav>
+  </header>
+  
+  <section class="map-search clearfix">
+    <h2 class="sr-only">搜索区</h2>
+    <a class="go-index" href="#">google地图首页</a>
+    <form action="#">
+      <label for="q-string" class="sr-only">搜索</label>
+      <input id="q-string" class="map-search__input"/>
+      <button type="submit" class="map-search__submit">
+        <span class="search-icon"></span>
+        <span class="sr-only">搜索</span>
+      </button>
+    </form>
+  </section>
+  
+  <section class="map-view">
+    <h2 class="sr-only">地图画面区</h2>
+  </section>
+  
+  <section id="map-nav" class="map-nav">
+    <h2 class="sr-only">地图导航区</h2>
+    
+    <footer class="footer">
+    </footer>
+  </section>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
