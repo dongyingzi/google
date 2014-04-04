@@ -1,0 +1,174 @@
+﻿<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<title>Template Index</title>
+
+  <style>
+  .clearfix {
+    overflow: auto;
+  }
+  .sales-title {
+    background-color: #EEE;
+    border-right: 1px solid #DDD;
+    padding: 5px 20px;
+    margin: 0;
+    font-size: 1em;
+    float: left;
+  }
+  .sales-category {
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .sales-item {
+    float: left;
+    display: inline;
+    padding: 0 10px;
+  }
+  .sales-link {
+    color: #000;
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    float: left;
+  }
+  .sales-item--selected > .sales-link {
+    color: #FFF;
+    background-color: #256BCB;
+  }
+  .sales-item-deselect {
+    display: none;
+    text-decoration: none;
+    padding: 5px;
+    float: left;
+  }
+  .sales-item--selected > .sales-item-deselect {
+    color: #FFF;
+    display: inline-block;
+    background-color: #256BCB;
+  }
+  
+  </style>
+
+</head>
+<body>
+
+<section class="sales clearfix">
+  <h2 class="sales-title">月销售额</h2>
+  <ol class="sales-category">
+    <li class="sales-item sales-item--selected"><a href="#" class="sales-link">￥1000以下</a>
+      <a href="#" class="sales-item-deselect">x</a></li>
+    <li class="sales-item"><a href="#" class="sales-link">￥1000-2999</a>
+      <a href="#" class="sales-item-deselect">x</a></li>
+    <li class="sales-item"><a href="#" class="sales-link">￥3000-4999</a>
+      <a href="#" class="sales-item-deselect">x</a></li>
+    <li class="sales-item"><a href="#" class="sales-link">￥5000以上</a>
+      <a href="#" class="sales-item-deselect">x</a></li>
+  </ol>
+</section>
+
+	<script>
+  (function () {
+    var sales = (function () {
+      var init;
+      
+      init = function (sales) {
+        sales.addEventListener('click', function (event) {
+          var target = event.target;
+          
+          if (target.tagName === 'A') {
+          
+            // click item to select
+            if (target.classList.contains('sales-link')) {
+              target.parentNode.classList.add('sales-item--selected');
+            } // end if
+            
+            // click deselect
+            else if (target.classList.contains('sales-item-deselect')) {
+              target.parentNode.classList.remove('sales-item--selected');
+            } // end else if
+          } // end if
+        }, false);
+      }; // end init()
+      
+      return {
+        init: init
+      };
+    }());
+    
+    var target = document.querySelector('.sales');
+    console.log(target);
+    sales.init(target);
+  }());
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
