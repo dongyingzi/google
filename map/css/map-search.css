@@ -24,7 +24,7 @@
 
 .map-search__submit {
   float: left;
-  display: block;
+  display: inline-block;
   margin-top: 5px;
   padding: 5px 20px;
   background-color: #4889F2;

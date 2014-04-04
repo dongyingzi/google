@@ -5,3 +5,6 @@ google
 
 2013-12-21
 1.添加google map首页
+
+module目录下保存小功能模块
+1.tabify.html 鼠标点击激活标签项，cookie保存状态，刷新后恢复最后一次状态

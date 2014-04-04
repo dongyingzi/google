@@ -1,0 +1,223 @@
+﻿<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<title>Template Index</title>
+
+  <style>
+
+
+  .tablinks {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    position: relative;
+    z-index: 1;
+    overflow: auto;
+    zoom: 1;
+  }
+  .tab-item {
+    float: left;
+    border: 1px solid #DDD;
+    background-color: #EEE;
+    margin-right: 5px;
+  }
+  .tab-item--active {
+    background-color: #FFF;
+    border-bottom-color: #FFF;
+  }
+  .tab-link {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #000;
+  }
+  .tab {
+    border: 1px solid #DDD;
+    margin-top: -1px;
+    display: none;
+  }
+  .tab--active {
+    display: block;
+  }
+  </style>
+
+</head>
+<body>
+
+<ol class="tablinks ">
+  <li class="tab-item tab-item--active"><a class="tab-link" href="#tab1">Tab 1</a></li>
+  <li class="tab-item"><a class="tab-link" href="#tab2">Tab 2</a></li>
+  <li class="tab-item"><a class="tab-link" href="#tab3">Tab 3</a></li>
+</ol>
+
+<div class="tab tab--active" id="tab1">内容1</div>
+<div class="tab" id="tab2">内容2</div>
+<div class="tab" id="tab3">内容3</div>
+
+	<script>
+  var tabify = (function () {
+    var tabify,
+      saveStatus,
+      loadStatus;
+      
+    saveStatus = function (key, value) {
+      var info = encodeURIComponent(key) + '=' + encodeURIComponent(value) +
+        '; max-age=600000';
+      document.cookie = info;
+    }; // end saveStatus()
+    
+    loadStatus = function (target) {
+      var items = document.cookie.split('; ');
+      var i , len, key, value, pair;
+      
+      for (i = 0, len = items.length; i < len; ++i) {
+        pair = items[i].split('=');
+        key = decodeURIComponent(pair[0]);
+        if (key === target) {
+          return decodeURIComponent(pair[1]);
+        }
+      } // end for
+    } // end loadStatus()
+    
+    tabify = function (container) {
+      var tabs = container.querySelectorAll('.tab-item');
+      var links = [];
+      var contents = [];
+      
+      var i, len, link, content;
+      for (i = 0, len = tabs.length; i < len; ++i) {
+        link = tabs[i].querySelector('.tab-link');
+        links.push(link);
+        content = document.querySelector(link.getAttribute('href'));
+        contents.push(content);
+      } // end for
+      
+      function disableAll() {
+        var i, len;
+        
+        for (i = 0, len = tabs.length; i < len; ++i) {
+          tabs[i].classList.remove('tab-item--active');
+        } // end for
+        for (i = 0, len = contents.length; i < len; ++i) {
+          contents[i].classList.remove('tab--active');
+        } // end for
+      } // end disableAll()
+      
+      function activeTabByLink(link) {
+        var href = link.getAttribute('href').trim().substr(1),
+          content,
+          i, len;
+          
+        link.parentNode.classList.add('tab-item--active');
+        for (i = 0, len = contents.length; i < len; ++i) {
+          content = contents[i];
+          if (content.id.trim() === href) {
+            content.classList.add('tab--active');
+            break;
+          } // end if
+        } // end for
+      } // end activeTabByLink()
+      
+      container.addEventListener('click', function (event) {
+        var target = event.target,
+          href;
+        
+        if (target.nodeName === 'A') {
+          href = target.getAttribute('href');
+          saveStatus('current', href);
+          
+          disableAll();
+          activeTabByLink(target);
+        } // end if
+      }, false);
+      
+      
+      disableAll();
+      var current = loadStatus('current');
+      current = current || links[0].getAttribute('href').trim();
+      for (i = 0, len = links.length; i < len; ++i) {
+        if (links[i].getAttribute('href') === current) {
+          activeTabByLink(links[i]);
+          break;
+        } // end if
+      } // end for
+      
+    };
+    
+    return {
+      tabify: tabify
+    };
+  }());
+  var tab = document.querySelector('.tablinks');
+  tabify.tabify(tab);
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
