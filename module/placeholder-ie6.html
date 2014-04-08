@@ -1,0 +1,190 @@
+﻿<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<title>Template Index</title>
+  <style>
+  .placeholder {
+    color: red;
+  }
+  </style>
+	
+</head>
+<body>
+  <form>
+    <input id="target" class="placeholder" placeholder="hello"/>
+  </form>
+
+  <script>
+  (function () {
+    var EventUtil = {
+      addListener: function (e, type, listener) {
+        if (e.addEventListener) {
+          e.addEventListener(type, listener, false);
+        } // end if
+        else if (e.attachEvent) {
+          e.attachEvent('on' + type, listener);
+        } // end else
+      }
+    };
+    
+    var DomUtil = {
+      addClass: function (e, cls) {
+        if (e.classList) {
+          e.classList.add(cls);
+        } // end if
+        else {
+          var className = e.className;
+          if (className) {
+            e.className = className + ' ' + cls;
+          } // end if
+          else {
+            e.className = cls;
+          } // end else
+        } // end else
+      },
+      removeClass: function (e, cls) {
+        if (e.classList) {
+          e.classList.remove(cls);
+        } // end if
+        else {
+          var className = ' ' + e.className + ' ';
+          className = className.replace(new RegExp('\\s+' + cls + '\\s+', 'g'), ' ')
+          e.className = className;
+        } // end else
+      }
+    };
+    
+    var Util = (function () {
+      var input = document.createElement('input');
+      var supportPlaceholder = 'placeholder' in input;
+      var placeholder;
+      
+      if (supportPlaceholder) {
+        placeholder = function () {};
+      } // end if
+      else {
+        placeholder = function (e) {
+          var holder = e.getAttribute('placeholder');
+          var value = e.getAttribute('value');
+          var modified = false;
+          
+          function clear(){
+            if (!modified) {
+              e.value = '';
+            } // end if
+          } // end clear()
+          
+          function reset() {
+            if (!modified) {
+              e.value = holder;
+            } // end if
+          } // end reset()
+          
+          function modify() {
+            if (e.value === '' && modified) {
+              modified = false;
+              DomUtil.addClass(e, 'placeholder');
+            } // end if      
+            else if (!modified){
+              modified = true;
+              DomUtil.removeClass(e, 'placeholder');
+            } // end else
+            
+          } // end modify()
+          
+          if (!value) {
+            e.value = holder;
+            EventUtil.addListener(e, 'focus', function () {
+              clear();
+            });
+            EventUtil.addListener(e, 'blur', function () {
+              reset();
+            });
+            EventUtil.addListener(e, 'keyup', function () {
+              modify();
+            });
+          } // end if
+        
+        };
+      } // end else
+      
+      return {
+        placeholder: placeholder
+      };
+      
+    }());
+    
+    var input = document.getElementById('target');
+    Util.placeholder(input);
+  }());
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
