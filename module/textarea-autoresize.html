@@ -1,0 +1,101 @@
+﻿<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<title>Template Index</title>
+  <style>
+  #target {
+    height: 1.2em;
+  }
+  </style>
+	
+</head>
+<body>
+  <form>
+    <textarea id="target"></textarea>
+  </form>
+
+  <script>
+  (function () {
+    var target = document.getElementById('target');
+    
+    function autosize(e) {
+      e.style.height = '1px';
+      e.style.height = e.scrollHeight + 'px';
+    } // end autosize()
+    
+    target.addEventListener('input', function (event) {
+      autosize(event.target);
+    }, false);
+
+  }());
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
