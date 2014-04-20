@@ -1,0 +1,241 @@
+﻿<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <title>App is coming soon.</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <style>
+  body {
+    font-size: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #32373d;
+  }
+  a {
+    text-decoration: none;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  #wrapper {
+    width: 220px;
+    margin: 100px auto;
+    font-size: 0.8125em;
+  }
+  .menu {
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.73), 0 0 18px 0 rgba(0, 0, 0, 0.13);
+       -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.73), 0 0 18px 0 rgba(0, 0, 0, 0.13);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.73), 0 0 18px 0 rgba(0, 0, 0, 0.13);
+  }
+  .menu > li > a {
+    background-color: #616975;
+    background-image: -webkit-linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
+    background-image:    -moz-linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
+    background-image:         linear-gradient(to bottom, rgb(114, 122, 134), rgb(80, 88, 100));
+    border-bottom: 1px solid #33373d;
+    -webkit-box-shadow: inset 0 1px 0 0 #878e98;
+       -moz-box-shadow: inset 0 1px 0 0 #878e98;
+            box-shadow: inset 0 1px 0 0 #878e98;
+    display: block;
+    height: 2.75em;
+    line-height: 2.75em;
+    text-indent: 2.75em;
+    position: relative;
+    color: #FFF;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  }
+  .menu > li > a:hover,
+  .menu > li > a.active {
+    background-color: #35afe3;
+    background-image: -webkit-linear-gradient(top, rgb(69, 199, 235), rgb(38, 152, 219));
+    background-image:    -moz-linear-gradient(top, rgb(69, 199, 235), rgb(38, 152, 219));
+    background-image:         linear-gradient(to bottom, rgb(69, 199, 235), rgb(38, 152, 219));
+    border-bottom: 1px solid #103c56;
+    -webkit-box-shadow: inset 0 1px 0 0 #61d2ef;
+       -moz-box-shadow: inset 0 1px 0 0 #6ad2ef;
+            box-shadow: inset 0 1px 0 0 #6ad2ef;
+  }
+  .menu ul li a {
+    background-color: #FFF;
+    font-size: 0.923em;
+    display: block;
+    height: 2.75em;
+    line-height: 2.75em;
+    text-indent: 2.75em;
+    color: #878d95;
+    border-bottom: 1px solid #efeff0;
+    position: relative;
+  }
+  .menu ul li:last-child a {
+    border-bottom: 1px solid #33373d;
+  }
+  .menu > li > a:before {
+    content: "";
+    background-image: url(img/sprite.png);
+    background-repeat: no-repeat;
+    font-size: 36px;
+    height: 1em;
+    width: 1em;
+    position: absolute;
+    margin: auto 0;
+    top: 0;
+    buttom: 0;
+    left: 0;
+  }
+  .item1 > a::before {
+    background-position: 0 0;
+  }
+  .item2 > a::before {
+    background-position: -38px 0;
+  }
+  .item3 > a::before {
+    background-position: 0 -38px;
+  }
+  .item4 > a::before {
+    background-position: -38px -38px;
+  }  
+  .item5 > a::before {
+    background-position: -76px 0;
+  }
+  .menu > li > a > span {
+    font-size: 0.857em;
+    display: inline-block;
+    position: absolute;
+    text-indent: 0;
+    right: 1em;
+    top: 50%;
+    border-radius: 5px;
+    background-color: #455056;
+    height: 1em;
+    line-height: 1em;
+    margin-top: -1em;
+    padding: 0.5em;
+  }
+  .menu > li > li:hover span,
+  .menu > li a.active span {
+    background: #2173a1;
+  }
+  .menu ul > li > a span {
+    position: absolute;
+    display: inline-block;
+    right: 1em;
+    top: 50%;
+    font-size: 0.857em;
+    margin-top: -1em;
+    height: 1em;
+    line-height: 1;
+    border-radius: 10px;
+    border: 1px solid #DDD;
+    text-indent: 0;
+    padding: 0.5em;
+  }
+  .menu ul li  a::before {
+    content: "";
+    height: 0;
+    font-size: 0;
+    border: 5px solid transparent;
+    border-left-color: #CCC;
+    border-right: none;
+    text-indent: none;
+    position: absolute;
+    left: 5px;
+    top: 40%;
+  }
+  </style>
+</head>
+<body>
+  
+<div id="wrapper">
+ 
+    <ul class="menu">
+        <li class="item1"><a href="#">Friends <span>340</span></a>
+            <ul>
+                <li class="subitem1"><a href="#">Cute Kittens <span>14</span></a></li>
+                <li class="subitem2"><a href="#">Strange “Stuff” <span>6</span></a></li>
+                <li class="subitem3"><a href="#">Automatic Fails <span>2</span></a></li>
+            </ul>
+        </li>
+        <li class="item2"><a href="#">Videos <span>147</span></a>
+            <ul>
+                <li class="subitem1"><a href="#">Cute Kittens <span>14</span></a></li>
+                <li class="subitem2"><a href="#">Strange “Stuff” <span>6</span></a></li>
+                <li class="subitem3"><a href="#">Automatic Fails <span>2</span></a></li>
+            </ul>
+        </li>
+        <li class="item3"><a href="#">Galleries <span>340</span></a>
+            <ul>
+                <li class="subitem1"><a href="#">Cute Kittens <span>14</span></a></li>
+                <li class="subitem2"><a href="#">Strange “Stuff” <span>6</span></a></li>
+                <li class="subitem3"><a href="#">Automatic Fails <span>2</span></a></li>
+            </ul>
+        </li>
+        <li class="item4"><a href="#">Podcasts <span>222</span></a>
+            <ul>
+                <li class="subitem1"><a href="#">Cute Kittens <span>14</span></a></li>
+                <li class="subitem2"><a href="#">Strange “Stuff” <span>6</span></a></li>
+                <li class="subitem3"><a href="#">Automatic Fails <span>2</span></a></li>
+            </ul>
+        </li>
+        <li class="item5"><a href="#">Robots <span>16</span></a>
+            <ul>
+                <li class="subitem1"><a href="#">Cute Kittens <span>14</span></a></li>
+                <li class="subitem2"><a href="#">Strange “Stuff” <span>6</span></a></li>
+                <li class="subitem3"><a href="#">Automatic Fails <span>2</span></a></li>
+            </ul>
+        </li>
+    </ul>
+ 
+</div>
+
+  <script src="js/jquery.js"></script>
+  <script>
+  var $menu_ul = $('.menu > li > ul'),
+    $menu_a = $('.menu > li > a');
+    
+  $menu_ul.hide();
+  $menu_a.click(function (e) {
+    e.preventDefault();
+    
+    if (!$(this).hasClass('active')) {
+      $menu_a.removeClass('active');
+      $menu_ul.filter(':visible').slideUp('normal');
+      $(this).addClass('active').next().stop(true, true).slideDown();
+    } // end if
+    else {
+      $(this).removeClass('active');
+      $(this).next().stop(true, true).slideUp('normal');
+    } // end else
+  
+  });
+  </script>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
