@@ -1,0 +1,130 @@
+﻿<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <title>App is coming soon.</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <style>
+  div {
+    float: left;
+    margin: 10px;
+    width: 200px;
+    position: relative;
+    z-index: 10;    
+  }  
+  img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    border: 10px solid #FFF;
+    border-radius: 3px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+       -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  }  
+
+  .stack::before,
+  .stack::after {
+    content: "";
+    border-radius: 3px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 10px solid #FFF;
+    left: 0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+       -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    -webkit-transition: 0.3s all ease-out;
+       -moz-transition: 0.3s all ease-out;
+            transition: 0.3s all ease-out;
+  }
+  .stack::before {
+    top: 4px;
+    z-index: -10;
+  }
+  .stack::after {
+    top: 8px;
+    z-index: -20;
+  }
+  .stack:hover::before,
+  .stack:hover::after {
+    top: 0;
+  }
+  
+
+  .rotate::before,
+  .rotate::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 3px;
+    border: 10px solid #FFF;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    -webkit-transition: 0.3s all ease-out;
+  }
+  .rotate::before {
+    -webkit-transform: rotate(2deg);
+    top: 4px;
+    z-index: -10;
+  }
+  .rotate::after {
+    z-index: -20;
+    top: 8px;
+    -webkit-transform: rotate(4deg);
+  }
+  .rotate:hover::before,
+  .rotate:hover::after {
+    -webkit-transform: rotate(0deg);
+  }
+  
+  
+  </style>
+</head>
+<body>
+  <div class="stack">
+    <img src="img/image1.jpg"/>
+  </div>
+  <div class="rotate">
+    <img src="img/image1.jpg"/>
+  </div>  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
