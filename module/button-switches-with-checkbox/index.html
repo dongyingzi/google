@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<title>Template Index</title>
+  <style>
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+  }
+  
+  .switch input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .switch {
+    width: 100px;
+    height: 100px;
+    position: relative;
+  }
+  
+  .switch label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 50%;
+    background-color: #EAEAEA;
+    box-shadow: 
+        0 3px 5px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3),
+        inset 0 -5px 5px rgba(100, 100, 100, 0.1),
+        inset 0 5px 5px rgba(255, 255, 255, 0.3);
+  }
+    .switch label::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -8%;
+        right: -8%;
+        bottom: -8%;
+        left: -8%;
+        border-radius: inherit;
+        background-color: #DDD;
+        background-image: linear-gradient(#CCC, #FFF);
+        box-shadow:
+            inset 0 2px 1px rgba(0, 0, 0, 0.15),
+            0 2px 5px rgba(200, 200, 200, 0.1);
+    }
+    .switch label::before {
+        content: "";
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        left: 40%;
+        top: 40%;
+        border-radius: inherit;
+        background-color: #969696;
+        background-image: radial-gradient(
+            40% 35%,
+            #CCC,
+            #969696 50%
+        );
+        box-shadow:
+            inset 0 2px 4px 1px rgba(0, 0, 0, 0.3),
+            0 1px 0 rgba(255, 255, 255, 1),
+            inset 0 1px 0 #FFF;
+    }
+    .switch input:checked ~ label {
+        background-color: #E5E5E5;
+        background-image: linear-gradient(#DEDEDE, #FDFDFD);
+    }
+    .switch input:checked ~ label::before {
+        background-color: #25d025;
+        background-image: radial-gradient(
+            40% 35%,
+            #5aef5a,
+            #25d025 60%
+        );
+        box-shadow:
+            inset 0 3px 5px 1px rgba(0, 0, 0, 0.1);
+            0 1px 0 rgba(255, 255, 255, 0.4),
+            0 0 10px 2px rgba(0, 210, 0, 0.5);
+    }
+                
+  </style>
+	
+</head>
+<body>
+
+	<div class="switch">
+    <input type="checkbox" />
+    <label></label>
+  </div> <!-- .switch -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
