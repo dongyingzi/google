@@ -14,6 +14,7 @@
     height: 100%;
     background-image: url(img/bg.jpg) ;
   }
+
   .cn-container {
     width: 60%;
     min-width: 300px;
@@ -22,18 +23,35 @@
     text-align: left;
     position: relative;
     font-family: Helvetica, Arial, sans-serif;
+    border: 1px solid #DDD;
+  }
+  .cn-slide {
+    display: none;
+  }
+  :target {
+    display: block;
   }
   .cn-container h2 {
     color: #FFF;
     position: absolute;
     z-index: 1000;
-    
+    right: 20px;
+    top: 10px;
+    margin: 0;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+  #slide-main a {
+    display: block;
+    width: 100%;
+    height: 50px;
   }
   </style>
 	
 </head>
 <body>
 
+    <a href="#slide-main">Show</a>
     <section class="cn-container">
     
         <div class="cn-slide" id="slide-main">
