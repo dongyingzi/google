@@ -12,7 +12,7 @@ function addText() {
     var words = ['aaa', 'bbb', 'ccc', 'ddd'];
 
     function add(e) {
-        var n = Math.random() * 20;
+        var n = Math.random() * 20 + 20;
         var i;
         var out = [];
 
@@ -27,7 +27,7 @@ function addText() {
             p.innerText = out.join(' ');
         }
 
-        e.parentNode.insertBefore(p, e);
+        e.parentNode.appendChild(p);
     };
 
     var btn,
@@ -47,7 +47,7 @@ function addText() {
         };
 
         item = document.getElementById(arguments[i]);
-        item.appendChild(btn);
+        item.insertBefore(btn, item.firstChild);
     }
 
 }
