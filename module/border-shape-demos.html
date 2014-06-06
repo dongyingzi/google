@@ -1,0 +1,108 @@
+﻿<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<title>Template Index</title>
+
+  <style>
+  .arrow {
+    width: 0;
+    height: 0;
+
+    border-top: 100px solid red;
+    border-right: 100px solid green;
+    border-bottom: 100px solid blue;
+    border-left: 100px solid yellow;
+
+    margin: 50px;
+
+    -webkit-animation: 4s rotate linear infinite;
+  }
+  @-webkit-keyframes rotate {
+    0% {}
+    25% {
+        -webkit-transform: rotate(90deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+    }
+    75% {
+        -webkit--transform: rotate(270deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+  }
+
+  .speech-bubble {
+    position: relative;
+    background-color: #292929;
+
+    width: 200px;
+    height: 150px;
+    line-height: 150px;
+
+    color: white;
+    text-align: center;
+
+    border-radius: 10px;
+  }
+  .speech-bubble::after {
+    content: "";
+    position: absolute;
+
+    width: 0;
+    height: 0;
+    border: 10px solid;
+  }
+
+  div {
+    margin: 20px;
+  }
+
+  .speech-bubble-top::after {
+    border-bottom-color: #292929;
+
+    left: 50%;
+    bottom: 100%;
+    margin-left: -15px;
+  }
+  .speech-bubble-right::after {
+    border-left-color: #292929;
+
+    left: 100%;
+    bottom: 50%;
+    margin-top: -10px;
+  }
+  .speech-bubble-bottom::after {
+    border-top-color: #292929;
+
+    left: 50%;
+    top: 100%;
+    margin-left: -15px;
+  }
+  </style>
+
+</head>
+<body>
+
+    <div class="arrow"></div>
+
+    <div class="speech-bubble speech-bubble-top">Hi everyone!</div>
+
+    <div class="speech-bubble speech-bubble-right">Hi bubble right</div>
+
+    <div class="speech-bubble speech-bubble-bottom">Hi speech bubble down</div>
+	<script>
+
+  </script>
+</body>
+</html>
+
+
+
+
