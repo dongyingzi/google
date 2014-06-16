@@ -5,3 +5,4 @@
 ## 文件及功能
 1. [module/js/isArray.js](module/js/isArray.js)：判断对象是否为数组
 2. [requirejs-demo/simple-demo](requirejs-demo/simple-demo):requirejs 简单demo
+3. [module/tabify.html](module/tabify.html):tab选显卡demo
