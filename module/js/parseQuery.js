@@ -1,45 +1,49 @@
 /**
- * 解析url中的query string转换为对象
- */
-
-/**
- * 解析url中的query string为对象
+ * 解析query string转换为对象，一个key有多个值时生成数组
  * 
- * @param {String} url 需要解析的url
- * @return {Object} url中参数解析后的对象
+ * @param {String} query 需要解析的query字符串，开头可以是?，按照application/x-www-form-urlencoded编码
+ * @return {Object} 参数解析后的对象
  */
-function parseQuery(url) {
+function parseQuery(query) {
     var result = {};
+
+    // 如果不是字符串返回空对象
+    if (typeof query !== 'string') {
+        return result;
+    }
+
+    // 去掉字符串开头可能带的?
+    if (query.charAt(0) === '?') {
+        query = query.substring(1);
+    }
+
+    var pairs = query.split('&');
+    var pair;
+    var key, value;
     var i, len;
-    var startIndex = url.indexOf('?');
-    var endIndex = url.indexOf('#');
 
-    if (startIndex !== -1) {
-        endIndex = (endIndex === -1) ? url.length : endIndex;
-        var query = url.substring(startIndex + 1, endIndex);
-        var pairs = query.split('&');
-        var pair, key, value;
-        var pos;
+    for (i = 0, len = pairs.length; i < len; ++i) {
+        pair = pairs[i].split('=');
+        // application/x-www-form-urlencoded编码会将' '转换为+
+        key = decodeURIComponent(pair[0]).replace(/\+/g, ' '); 
+        value = decodeURIComponent(pair[1]).replace(/\+/g, ' ');
 
-        for (i = 0, len = pairs.length; i < len; ++i) {
-            pair = pairs[i].split('=');
-            key = decodeURIComponent(pair.substring(0, pos));
-            value = decodeURIComponent(pair.substring(pos + 1).replace(/\+/g, ' '));
+        // 如果是新key，直接添加
+        if (!(key in result)) {
+            result[key] = value;
+        }
+        // 如果key已经出现一次以上，直接向数组添加value
+        else if (isArray(result[key])) {
+            result[key].push(value);
+        }
+        // key第二次出现，将结果改为数组
+        else {
+            var arr = [result[key]];
+            arr.push(value);
+            result[key] = arr;
+        } // end if-else
+    } // end for 
 
-            // add new key:value pair
-            if (!result.hasOwnProperty(key)) {
-                result[key] = value;
-            // push item in exist array
-            } else if (isArray(result[key])) {
-                result[key].push(value);
-            // create array for multiply key: value
-            } else {
-                var arr = [result[key]];
-                arr.push(value);
-                result[key] = arr;
-            } // end if-else
-        } // end for
-    } // end if
     return result;
 }
 
@@ -52,7 +56,7 @@ function isArray(arg) {
 
 /**
 
-console.log(parseQuery('https://www.google.com.hk/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#ie=UTF-8&q=url%20with%20query&sourceid=chrome-psyapi2'));
+console.log(parseQuery('sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#ie=UTF-8&q=url%20with%20query&sourceid=chrome-psyapi2'));
 
 
  */
