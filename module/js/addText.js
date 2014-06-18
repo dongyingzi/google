@@ -28,10 +28,15 @@ function addText() {
         }
 
         e.parentNode.appendChild(p);
-    };
+    }
 
     var btn,
         item;
+
+    function onClick() {
+        add(this);
+        return false;
+    }
     for (i = 0, len = arguments.length; i < len; ++i) {
      
         btn = document.createElement('a');
@@ -41,10 +46,7 @@ function addText() {
             btn.innerText = 'add text';
         }
         btn.href = '#';
-        btn.onclick = function () {
-            add(this);
-            return false;
-        };
+        btn.onclick = onClick;
 
         item = document.getElementById(arguments[i]);
         item.insertBefore(btn, item.firstChild);

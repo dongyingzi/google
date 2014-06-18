@@ -6,7 +6,7 @@
  * @return {Boolean} 传入参数是数组返回true，否则返回false
  */
 function isArray(arg) {
-    if (typeof arg === 'object') {
+    if (arg && typeof arg === 'object') {
         return Object.prototype.toString.call(arg) === '[object Array]';
     }
     return false;

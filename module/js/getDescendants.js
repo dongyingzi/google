@@ -13,12 +13,14 @@ function getDescendants(node, n) {
     var foreach = Array.prototype.forEach;
     var i, len, cur, childNodes, child;
 
+    function addChild(d, i) {
+        result.push(d);
+    }
+
     while (n--) {
         result = [];
         for (i = 0, len = p.length; i < len; ++i) {
-            foreach.call(p[i].childNodes, function (d, i) {
-              result.push(d);
-            });
+            foreach.call(p[i].childNodes, addChild);
         } // end for
         p = result;
     } // end while

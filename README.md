@@ -6,3 +6,5 @@
 1. [module/js/isArray.js](module/js/isArray.js)：判断对象是否为数组
 2. [requirejs-demo/simple-demo](requirejs-demo/simple-demo):requirejs 简单demo
 3. [module/tabify.html](module/tabify.html):tab选显卡demo
+4. [module/clock](module/clock):基于css3 transform的时钟
+5. [module/js/isFunction](module/js/isFunction.js):判断对象是否为函数，typeof符合规范时优先使用，否则使用toString

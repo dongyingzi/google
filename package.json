@@ -1,0 +1,26 @@
+{
+  "name": "google",
+  "version": "0.0.0",
+  "description": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qiu-deqing/google.git"
+  },
+  "keywords": [
+    "module"
+  ],
+  "author": "qiudeqing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qiu-deqing/google/issues"
+  },
+  "homepage": "https://github.com/qiu-deqing/google",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0"
+  }
+}
