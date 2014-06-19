@@ -11,12 +11,15 @@ module.exports = function (grunt) {
                     jQuery: true
                 }
             },
-            uses_defaults: {
-                files: ['module/js/*.js'],
-                ignore: ['module/js/jquery.js']
-            }
+            src: ['module/js/*.js', 'module/test/*.js', '!module/js/jquery.js']
+        },
+        qunit: {
+            src: ['module/test/*.html']
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-qunit');
+
+    grunt.registerTask('default', ['jshint', 'qunit']);
 };

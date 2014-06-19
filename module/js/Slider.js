@@ -117,7 +117,5 @@ define(['jquery'], function ($) {
         interval: 4000
     };
 
-    function () {};
-
     return Slider;
 });

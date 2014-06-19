@@ -13,4 +13,4 @@
 6. [module/js/parseQuery.js](module/js/parseQuery.js):解析url中的query string为对象
 7. [grunt-demo/jshint](grunt-demo/jshint):grunt jshint demo
 8. [grunt-demo/qunit](grunt-demo/qunit):grunt qunit demo
-9. 
+9. [module/js/parseUrl.js](module/js/parseUrl.js): 解析url为对象，属性值参考window.location
