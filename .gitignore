@@ -1,3 +1,5 @@
 
-# �������Ƕ�׵����ļ�������������node_modulesĿ¼
+# 由于深层嵌套导致文件名过长。忽略所有node_modules目录，运行对应
+# 项目时需运行npm install安装
+
 node_modules

@@ -1,6 +1,8 @@
 # google
 
-最开始打算模仿谷歌各种功能主页,现在保存各种练习小代码段，demo
+最开始打算模仿谷歌各种功能主页,现在保存各种练习小代码段，demo  
+
+由于部分node需要的模块嵌套层次太多，导致文件名过长。.gitignore文件中忽略了所有node_modules文件夹，运行特定项目时需要npm install安装模块
 
 ## 文件及功能
 1. [module/js/isArray.js](module/js/isArray.js)：判断对象是否为数组
