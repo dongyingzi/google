@@ -1,0 +1,19 @@
+{
+  "name": "jshint",
+  "version": "0.0.0",
+  "description": "grunt jshint demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "grunt",
+    "jshint"
+  ],
+  "author": "qiudeqing",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0"
+  }
+}

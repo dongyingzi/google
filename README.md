@@ -9,3 +9,4 @@
 4. [module/clock](module/clock):基于css3 transform的时钟
 5. [module/js/isFunction](module/js/isFunction.js):判断对象是否为函数，typeof符合规范时优先使用，否则使用toString
 6. [module/js/parseQuery.js](module/js/parseQuery.js):解析url中的query string为对象
+7. [grunt-demo/jshint](grunt-demo/jshint):grunt jshint demo
