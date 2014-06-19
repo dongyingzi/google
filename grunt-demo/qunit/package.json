@@ -1,0 +1,19 @@
+{
+  "name": "qunit",
+  "version": "0.0.0",
+  "description": "grunt qunit demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "grunt",
+    "qunit"
+  ],
+  "author": "qiudeqing",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-qunit": "^0.5.1"
+  }
+}
