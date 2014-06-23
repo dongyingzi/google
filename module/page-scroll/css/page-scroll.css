@@ -1,0 +1,19 @@
+.scroll-container {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    border: 1px solid #DDD;
+
+    width: 3em;
+    cursor: pointer;
+}
+.scroll-hidden {
+    display: none;
+}
+.scroll-top {
+    padding: 0.5em;
+}

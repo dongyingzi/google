@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Learning AngularJS</title>
+    <script src="js/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="maincontroller.js"></script> 
+</head>
+<body>
+
+    <div id="content" ng-app="MyTutorialApp" ng-controller="MainController">
+        <select ng-model="selectedPerson" ng-options="obj.name for obj in people"></select>
+        <select ng-model="selectedGenre">
+            <option ng-repeat="label in people[selectedPerson.id].music">{{label}}</option>
+        </select>
+    </div> 
+
+   </div>
+</body>
+</html>

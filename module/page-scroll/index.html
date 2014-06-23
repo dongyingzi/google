@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Template</title>
+    <link rel="stylesheet" type="text/css" href="css/page-scroll.css">
+    <style>
+    </style>
+</head>
+<body>
+    <ul>
+    </ul>
+    
+    <script>
+    var ul = document.getElementsByTagName('ul')[0];
+    var i, n, html = '';
+    for (i = 0; i < 100; ++i) {
+        html += '<li>' + i + '</li>'
+    }
+    ul.innerHTML = html;
+    </script>
+    <script src="js/page-scroll.js"></script>
+    <script type="text/javascript">
+    var scroll = new PageScroll();
+    </script>
+</body>
+</html>
