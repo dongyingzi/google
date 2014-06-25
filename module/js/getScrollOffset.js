@@ -21,7 +21,7 @@ function getScrollOffset(w) {
         return {
             x: d.documentElement.scrollLeft,
             y: d.documentElement.scrollTop
-        }
+        };
     }
 
     return {

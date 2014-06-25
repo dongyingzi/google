@@ -16,3 +16,5 @@
 9. [module/js/parseUrl.js](module/js/parseUrl.js): 解析url为对象，属性值参考window.location
 10. [module/js/getScrollOffset.js](module/js/getScrollOffset.js):获取指定窗口的滚动条偏移量，如未指定则返回当前窗口滚动条偏移量
 11. [module/page-scroll](module/page-scroll):一个简单的返回顶部组件的功能
+12. [module/modal-window.html](module/modal-window.html)：html5，css3弹出模式对话框
+13. 
