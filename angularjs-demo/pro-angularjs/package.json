@@ -1,0 +1,15 @@
+{
+  "name": "pro-angularjs",
+  "version": "0.0.0",
+  "description": "pro angularjs demos",
+  "main": "index.js",
+  "dependencies": {
+    "connect": "3.0.1",
+    "serve-static": "1.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
