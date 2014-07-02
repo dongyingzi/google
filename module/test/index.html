@@ -11,6 +11,51 @@
   <div id="qunit-fixture">
     
     <div class="richText"></div>
+
+    <form id="serialize-form">
+
+      <div>
+        <label>Name:</label>
+        <input type="text" name="name" value="qiu" />
+      </div>
+      <div>
+        <label>Address:</label>
+        <input type="hidden" name="address" value="beijing" />
+      </div>
+      <div>
+        <label>Password</label>
+        <input type="password" name="password" value="12345" />
+      </div>
+
+      <div><label>Gender:</label>
+        <input type="radio" name="gender" value="female" checked="checked" />
+        <input type="radio" name="gender" value="male" />
+      </div>
+
+      <div>
+        <label>hobby:</label>
+        <input type="checkbox" name="hobby" checked value="football" />
+        <input type="checkbox" name="hobby" checked value="basketball" />
+        <input type="checkbox" name="hobby" value="swim" />
+      </div>
+
+      <select name="age">
+        <option value="23">23</option>
+        <option value="23" selected>24</option>
+      </select>
+
+      <select name="job" multiple>
+        <option value="FE" selected>FE</option>
+        <option value="RD" selected>RD</option>
+        <option value="UE">UE</option>
+      </select>
+
+      <textarea name="description">邱德清</textarea>
+
+        <input type="submit">
+
+      
+    </form>
   </div>
 
   <script src="lib/qunit-1.14.0.js"></script>
@@ -25,5 +70,8 @@
 
   <script src="../js/richText.js"></script>
   <script src="richTextTest.js"></script>
+
+  <script src="../js/serializeForm.js"></script>
+  <script src="serializeFormTest.js"></script>
 </body>
 </html>
