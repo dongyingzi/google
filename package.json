@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "module",
   "main": "index.js",
+  "dependencies" : {
+    "connect": "3.0.1",
+    "serve-static": "1.3.0"
+  },
   "scripts": {
     "test": "test"
   },

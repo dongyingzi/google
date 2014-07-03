@@ -60,7 +60,5 @@ function serializeForm(form) {
         } // end switch
     } // end for
     
-    console.log(result.join('&'));
-
     return result.join('&');
 }
