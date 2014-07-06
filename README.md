@@ -40,3 +40,8 @@
 - [module/page-scroll](module/page-scroll):一个简单的返回顶部组件的功能
 
 - [module/modal-window.html](module/modal-window.html)：html5，css3弹出模式对话框
+
+
+- [module/tips/tips.html](module/tips/tips.html):提示框控件
+
+
