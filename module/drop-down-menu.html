@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>Template Index</title>
+
+  <style>
+  .drop-down {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .drop-down-item {
+    position: relative;
+    padding: 10px;
+    background-color: #EEE;
+    border: 1px solid #DDD;
+    width: 200px;
+  }
+  .drop-down-link {
+    text-decoration: none;
+    color: #000;
+  }
+  .drop-down-icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    border: 5px solid #EEE;
+    border-top-color: #000;
+  }
+  .drop-down-item-active,
+  .drop-down-item:hover {
+    background-color: #7B7B7B;
+    border-color: #7B7B7B;
+  }
+
+  .drop-down-item-active .drop-down-link,
+  .drop-down-item:hover .drop-down-link {
+    color: #FFF;
+  }
+  .drop-down-item-active .drop-down-icon,
+  .drop-down-item:hover .drop-down-icon {
+    border-color: #7B7B7B;
+    border-bottom-color: #FFF;
+    margin-top: -5px;
+  }
+
+
+  .menu {
+    position: absolute;
+    display: none;
+    z-index: 100;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    margin-top: 2px;
+
+    border: 1px solid #DDD;
+
+    top: 100%;
+    left: 0;
+  }
+  .drop-down-item:hover .menu,
+  .drop-down-item-active .menu{
+    display: block;
+  }
+
+  .menu-item {
+    border-bottom: 1px solid #DDD;
+    padding: 10px;
+  }
+  .menu-item:last-child,
+  .menu-item-last {
+    border-bottom-width: 0;
+  }
+  .menu-link {
+    color: #909090;
+    text-decoration: none;
+  }
+
+  </style>
+</head>
+<body>
+    <ul class="drop-down" id="drop-down">
+        <li class="drop-down-item">
+            <a class="drop-down-link" href="#">下拉菜单
+                <span class="drop-down-icon"></span>
+            </a>
+            <ul class="menu">
+                <li class="menu-item"><a href="#" class="menu-link">Item 1</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Item 2</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Item 3</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Item 4</a></li>
+            </ul>            
+        </li>
+    </ul>
+
+
+
+
+<script>
+function hasClass(elem, cls) {
+    var className = ' ' + elem.className + ' ';
+    return className.indexOf(' ' + cls + ' ') !== -1;
+}
+function addClass(elem, cls) {
+    if (elem.className) {
+        elem.className += ' ' + cls;
+    } else {
+        elem.className = cls;
+    }
+}
+function removeClass(elem, cls) {
+    var className = ' ' + elem.className + ' ';
+    var regexp = new RegExp(' ' + cls + ' ');
+    elem.className = className.replace(regexp, ' ');
+}
+
+var dropDown = document.getElementById('drop-down');
+if (dropDown.attachEvent) {
+    dropDown.attachEvent('onmouseover', function () {
+        var target = window.event.srcElement;
+        if (hasClass(target, 'drop-down-item')) {
+            addClass(target, 'drop-down-item-active');
+        }
+    });
+
+
+}
+
+</script>
+</body>
+</html>
+
+
+
+
