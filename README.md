@@ -48,3 +48,6 @@
 - [module/drop-down-menu.html](module/drop-down-menu.html):下拉菜单
 
 
+- [module/check-items.html](module/check-items.html): checkbox选择
+
+

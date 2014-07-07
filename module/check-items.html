@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>Template Index</title>
+
+  <style>
+  .container {
+    *zoom: 1;
+    background-color: #EEE;
+  }
+  .container:after {
+    display: block;
+    content: "";
+    height: 0;
+
+    clear: both;
+  }
+  .label {
+    display: block;
+    float: left;
+
+    width: 200px;
+    padding: 5px 0;
+    text-align: center;
+    background-color: #E8E8E8;
+    border-right: 1px solid #BCBCBC;
+  }
+  .options {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .option {
+    float: left;
+    margin: 0 10px;
+    position: relative;
+  }
+  .option label {
+    display: block;
+    padding: 5px 0;
+  }
+  input {
+    position: absolute;
+    height: 0;
+  }
+  input:checked + label {
+    background-color: #236CC9;
+    position: absolute;
+  }
+  </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <span class="label">月销售额</span>
+        <ul class="options">
+            <li class="option">
+                <input type="checkbox" id="level-1" /><label for="level-1">￥100以下</label>
+            </li>
+            <li class="option">
+                <input type="checkbox" id="level-2" /><label for="level-2">￥100-299</label>
+            </li>
+            <li class="option">
+                <input type="checkbox" id="level-3" /><label for="level-3">￥300-399</label>
+            </li>
+            <li class="option">
+                <input type="checkbox" id="level-4" /><label for="level-4">￥500以上</label>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <script>
+
+  </script>
+</body>
+</html>
+
+
+
+
