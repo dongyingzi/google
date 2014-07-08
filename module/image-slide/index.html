@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>Template Index</title>
+    <link href="slide.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <ul class="slide" id="slide">
+        <li class="slide-item">
+            <img class="slide-img" src="http://ww2.sinaimg.cn/mw690/79c57e13jw1ehshhd53k1j20r80a0q40.jpg">
+        </li>
+        <li class="slide-item">
+            <img class="slide-img" src="http://ww1.sinaimg.cn/mw690/79c57e13jw1ehshhcrtv5j20r80a00v6.jpg">
+        </li>
+        <li class="slide-item">
+            <img class="slide-img" src="http://ww4.sinaimg.cn/mw690/79c57e13jw1ehshhcdxwyj20r80a0go7.jpg">
+        </li>         
+        <a class="slide-prev" href="#">&lt;</a>       
+        <a class="slide-next" href="#">&gt;</a>
+    </ul>
+
+
+
+    <script src="slide.js"></script>
+    <script>
+    var elem = document.getElementById('slide');
+    var slide = new Slide({
+        slide: elem
+    });
+  </script>
+</body>
+</html>
+
+
+
+

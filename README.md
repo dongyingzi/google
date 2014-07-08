@@ -50,4 +50,6 @@
 
 - [module/check-items.html](module/check-items.html): checkbox选择
 
+- [module/image-slide/index.html](module/image-slide/index.html):图片轮播控件
+
 

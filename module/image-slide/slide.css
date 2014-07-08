@@ -1,0 +1,53 @@
+.slide {
+    position: relative;
+
+    width: 690px;
+    height: 250px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.slide-item {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-item-active {
+    z-index: 3;
+}
+
+.slide-prev,
+.slide-next {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    margin-top: -46px;
+    height: 92px;
+    line-height: 92px;
+
+    left: 5px;
+    width: 27px;
+    text-align: center;
+
+    background-color: #444;
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* for IE5-7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* for IE 8*/    
+    outline: none;
+
+    color: #FFF;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.slide-next {
+    right: 5px;
+    left: auto;
+}
+
