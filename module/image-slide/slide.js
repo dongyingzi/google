@@ -20,8 +20,24 @@ var Slide = (function (window, undefined) {
 
     function removeClass(elem, cls) {
         var className = ' ' + elem.className + ' ';
-        var reg = new RegExp(' ' + cls + ' ');
-        elem.className = className.replace(reg, ' ');
+        var reg = new RegExp('\\s+' + cls + '\\s+');
+        elem.className = className.replace(reg, ' ').replace(/^\s+|\s+$/, '');
+    }
+
+    function text(elem, str) {
+        if (str == undefined) {
+            if ('textContent' in elem) {
+                return elem.textContent;
+            } else if ('innerText' in elem) {
+                return elem.innerText;
+            }
+        } else {
+            if ('textContent' in elem) {
+                elem.textContent = str;
+            } else if ('innerText' in elem) {
+                elem.innerText = str;
+            }
+        }
     }
 
     var EventUtil = {
@@ -56,23 +72,34 @@ var Slide = (function (window, undefined) {
         var self = this;
         this.current = 0;
         this.onSlide = function (index) {
-            console.log(index);
         };
 
         var items = this.slide.querySelectorAll('.' + Slide.clsSlideItem);
         this.items = Array.prototype.slice.call(items, 0);
         this.length = items.length;
 
-        var i, len, nav;
+        var i, len, nav, navItem;
         var frag = document.createDocumentFragment();
-        for (i = this.length - 1; i >= 0; --i) {
-            nav = document.createElement('a');
-            nav.href = "#";
-            nav.className = Slide.clsSlideNav;
-            nav.setAttribute('index', i);
-            frag.appendChild(nav);
+        nav = document.createElement('ol');
+        addClass(nav, Slide.clsSlideNav);
+        frag.appendChild(nav);
+        var li;
+
+        for (i = 0, len = this.length; i < len; ++i) {
+            li = document.createElement('li');
+            addClass(li, Slide.clsSlideNavItem);
+
+            navItem = document.createElement('a');
+            navItem.href = "#";
+            navItem.className = Slide.clsSlideNavLink;
+            text(navItem, i);
+
+            li.appendChild(navItem);
+            nav.appendChild(li);
         }
+        this.navItems = Array.prototype.slice.call(nav.children, 0);
         this.slide.appendChild(frag);
+        
 
         EventUtil.on(this.slide, 'click', function (event) {
             event = event || window.event;
@@ -82,9 +109,12 @@ var Slide = (function (window, undefined) {
                 self.activeItem(self.current - 1);
             } else if (hasClass(target, Slide.clsSlideNext)) {
                 self.activeItem(self.current + 1);
+            } else if (hasClass(target, Slide.clsSlideNavLink)) {
+                self.activeItem(text(target));
             }
         });
 
+        this.activeItem(this.current);
 
     };
 
@@ -98,6 +128,9 @@ var Slide = (function (window, undefined) {
         addClass(this.items[index], Slide.clsSlideItemActive);
         removeClass(this.items[this.current], Slide.clsSlideItemActive);
 
+        removeClass(this.navItems[this.current], Slide.clsSlideNavItemActive);
+        addClass(this.navItems[index], Slide.clsSlideNavItemActive);
+
         this.current = index;
         if (this.onSlide) {
             this.onSlide.call(this, index);
@@ -109,6 +142,9 @@ var Slide = (function (window, undefined) {
     Slide.clsSlidePrev = 'slide-prev';
     Slide.clsSlideNext = 'slide-next';
     Slide.clsSlideNav = 'slide-nav';
+    Slide.clsSlideNavItem = 'slide-nav-item';
+    Slide.clsSlideNavItemActive = 'slide-nav-item-active';
+    Slide.clsSlideNavLink = 'slide-nav-link';
 
 
     return Slide;

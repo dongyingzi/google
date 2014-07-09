@@ -38,7 +38,6 @@
     opacity: 0.5;
     filter: alpha(opacity=50); /* for IE5-7 */
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* for IE 8*/    
-    outline: none;
 
     color: #FFF;
     text-decoration: none;
@@ -49,5 +48,36 @@
 .slide-next {
     right: 5px;
     left: auto;
+}
+
+.slide-nav {
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+
+    bottom: 10px;
+    text-align: center;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slide-nav-item {
+    display: inline-block;
+    margin: 0 2px;
+}
+.slide-nav-link {
+    display: block;
+    width: 15px;
+    height: 15px;
+
+    background-color: #DDD;
+
+    border-radius: 50%;
+    text-indent: -9999px;
+}
+.slide-nav-item-active .slide-nav-link {
+    background-color: #3F77BB;
 }
 
